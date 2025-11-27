@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Opening Animation</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .letter {
+      font-size: 80px;
+      font-weight: bold;
+      color: #fff;
+      animation: slideInLeft 0.8s ease-out forwards;
+    }
+
+    .letter-a { animation-delay: 0.1s; }
+    .letter-i { animation-delay: 0.3s; }
+    .letter-g { animation-delay: 0.5s; }
+    .letter-e { animation-delay: 0.7s; }
+    .letter-t { animation-delay: 0.9s; }
+    .letter-a2 { animation-delay: 1.1s; }
+    .letter-i2 { animation-delay: 1.3s; }
+
+    @keyframes slideInLeft {
+      0% { opacity: 0; transform: translateX(-100px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @media (max-width: 768px) {
+      .letter {
+        font-size: 60px;
+      }
+      .container {
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .letter {
+        font-size: 40px;
+      }
+      .container {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="letterContainer">
+    <span class="letter letter-a">A</span>
+    <span class="letter letter-i">I</span>
+    <span class="letter letter-g">G</span>
+    <span class="letter letter-e">E</span>
+    <span class="letter letter-t">T</span>
+    <span class="letter letter-a2">A</span>
+    <span class="letter letter-i2">I</span>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 3000);
+  </script>
+</body>
+</html>
